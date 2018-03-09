@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: properties-service.xml 16662 2003-08-27 04:38:22Z patriot1burke $ -->
+<!DOCTYPE server>
+<server>
+    <!-- ==================================================================== -->
+    <!-- System Properties Service                                            -->
+    <!-- ==================================================================== -->
+    <!--
+     | Allows rich access to system properties.
+   -->
+    <mbean code="org.jboss.varia.property.SystemPropertiesService" name="jboss:type=Service,name=MDPhotosSystemProperties">
+        <!-- 
+       | Load properties from each of the given comma seperated URLs
+
+    <attribute name="URLList">
+      http://somehost/some-location.properties,
+      ./conf/somelocal.properties
+    </attribute>
+
+    -->
+        <!-- 
+       | Set raw properties file style properties.
+-->
+    <attribute name="Properties">
+    	<!--  WINDOWS CONFIG -->
+		<!-- mdstudio.photoUtilSvc.tempPhotoLocation=J:\\mdStudio-Temporary_PhotoLocation
+		mdstudio.photoUtilSvc.permPhotoLocation=J:\\mdStudio-Permanent_PhotoLocation
+		mdstudio.tempSlideShowLocation=J:\\mdStudio-Temporary_SlidePhotoLocation
+		mdstudio.permSlideShowLocation=J:\\mdStudio-Permanent_SlidePhotoLocation
+		mdstudio.studio.imageSize=1000
+		
+		photo info svc loc
+		mdstudio.photoInfoSvc.permSlideShowLocation=J:\\mdStudio-Permanent_SlidePhotoLocation
+		mdstudio.photoInfoSvc.permPhotoLocation=J:\\mdStudio-Permanent_PhotoLocation
+		mdstudio.photoInfoSvc.permSpecialPhotoLocation=J:\\mdStudio-Permanent_SpecialPhotoLocation
+		mdstudio.photoInfoSvc.permPreviewLocation=J:\\mdStudio-Permanent_PreviewPhotoLocation 
+		mdstudio.photoInfoSvc.adminMiscellaneous.photoLocation=J:\\mdStudio-admin-miscellaneousPhotoLocation -->
+		
+		
+		<!-- MAC CONFIG -->
+		mdstudio.photoUtilSvc.tempPhotoLocation=/Users/rordinario/Pictures/mdtempfolder
+		mdstudio.photoUtilSvc.permPhotoLocation=/Users/rordinario/Pictures/mdpermfolder
+		mdstudio.tempSlideShowLocation=/Users/rordinario/Pictures/mdtempslideshow
+		mdstudio.permSlideShowLocation=/Users/rordinario/Pictures/mdpermslideshow
+		mdstudio.studio.imageSize=1000
+		
+		<!-- photo info svc loc -->
+		mdstudio.photoInfoSvc.permSlideShowLocation=/Users/rordinario/Pictures/mdpermslideshow
+		mdstudio.photoInfoSvc.permPhotoLocation=/Users/rordinario/Pictures/mdpermfolder
+		mdstudio.photoInfoSvc.permPreviewLocation=/Users/rordinario/Pictures/mdpermpreview
+    </attribute>
+    </mbean>
+</server>
